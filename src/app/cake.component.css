@@ -1,0 +1,17 @@
+.CakeSlot{
+    width: 350px;
+    padding: 15px;
+
+}
+
+.CakePicture{
+    width: 100%;
+    height: 350px;
+    border: dotted 3px green;
+}
+
+.CakeDescription{
+    width: 100%;
+    height: 150px;
+    border: dotted 3px yellow;
+}
