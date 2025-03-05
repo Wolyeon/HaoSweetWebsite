@@ -9,6 +9,5 @@ import { Component } from '@angular/core';
 })
 export class CakeComponent {
     description = "Test Description"
-    picture = "filler"
-    
+    picture = "G:/Workspace/Git_Workspace/HaoSweetWebsite/src/images/20241221_145613.jpg"
 }
