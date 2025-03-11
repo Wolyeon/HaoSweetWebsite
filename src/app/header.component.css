@@ -1,0 +1,28 @@
+.Header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-bottom: solid 3px white;
+    padding-top: 2%;
+}
+
+.Icon{
+    height: 250px;
+    width: 250px;
+    align-self: center;
+}
+
+.Menu{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 10px;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: column;
+    padding: 25px, 25px;
+    cursor: pointer;
+}

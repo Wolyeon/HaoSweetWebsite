@@ -1,0 +1,18 @@
+.Footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-top: Solid 3px rgb(255, 255, 255);
+    padding-top: 2%;
+}
+
+.Icon{
+    height: 150px;
+    width: 20%;
+    align-self: center;
+}
+
+.Title{
+    padding: 10px;
+}

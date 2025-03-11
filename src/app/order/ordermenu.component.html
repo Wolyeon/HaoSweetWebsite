@@ -1,0 +1,33 @@
+<body>
+  <h1>ORDER MENU GOES HERES</h1>
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="readTerms">Did you read the terms and conditions?</label>
+      <input type="checkbox" id="readTerms" formControlName="readTerms"/>
+    </div>
+    <div>
+      <label for="pickup">Time and Date for pickup? </label>
+      <input type="datetime-local" id="pickUp" formControlName="pickup"/>
+    </div>
+    <div>
+      <label for="cakeSize">What size cake? </label>
+      <select id="size" name="sizes" formControlName="size">
+        <option value="8">8"</option>
+        <option value="10">10"</option>
+      </select>
+    </div>
+    <div>
+      <label for="message">Do you want a message on the cake? </label>
+      <div>
+        <textarea rows="5" cols="75" formControlName="message"></textarea>
+      </div>
+    </div>
+    <div>
+      <label for="message">Do you have any allergies? </label>
+      <div>
+        <textarea rows="5" cols="75" formControlName="allergies"></textarea>
+      </div>
+    </div>
+    <button type="submit" [disabled]="myForm.invalid">Submit!</button>
+  </form>
+</body>
