@@ -7,9 +7,10 @@ body{
 
 .BodyContent{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 1000px;
+    overflow: auto;
 }
 
 .Row{

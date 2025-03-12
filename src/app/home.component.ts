@@ -6,16 +6,12 @@ import { CakeComponent } from './cake.component';
   imports: [CakeComponent],
   template: `   
   <div class="BodyContent">
-    <div class="Row">
       <cake/>
       <cake/>
       <cake/>
-    </div>
-    <div class="Row">
       <cake/>
       <cake/>
       <cake/>
-    </div>
   </div>
 `,
   styleUrl: './app.component.css',
