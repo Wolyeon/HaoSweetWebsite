@@ -6,15 +6,9 @@ body{
 }
 
 .BodyContent{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 1000px;
-    overflow: auto;
-}
-
-.Row{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 375px 375px 375px 375px;
+    grid-template-rows: 400px;
+    grid-template-areas: 375px 400px;
+    grid-gap: 75px;
 }

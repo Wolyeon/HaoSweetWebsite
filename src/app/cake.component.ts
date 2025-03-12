@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'cake',
+  imports: [],
   template: `
     <div Class="CakeSlot">
       <img [src]="picture">
@@ -15,4 +16,6 @@ import { Component } from '@angular/core';
 export class CakeComponent {
     description = "Test Description"
     picture = "MintCake.jpg"
+
+    // @Input() cakeInformation!: CakeInformation;
 }

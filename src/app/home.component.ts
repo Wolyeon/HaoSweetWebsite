@@ -5,17 +5,13 @@ import { CakeComponent } from './cake.component';
   selector: 'homemenu',
   imports: [CakeComponent],
   template: `   
-  <div class="BodyContent">
-      <cake/>
-      <cake/>
-      <cake/>
-      <cake/>
-      <cake/>
-      <cake/>
-  </div>
-`,
+    <div class="BodyContent">
+        <cake/>
+        <cake/>
+    </div>
+  `,
   styleUrl: './app.component.css',
 })
 export class HomeComponent {
-    
+  
 }
