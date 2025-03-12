@@ -8,6 +8,9 @@ import { CakeComponent } from './cake.component';
     <div class="BodyContent">
         <cake/>
         <cake/>
+        <cake/>
+        <cake/>
+        <cake/>
     </div>
   `,
   styleUrl: './app.component.css',
