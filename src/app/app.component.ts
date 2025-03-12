@@ -4,20 +4,20 @@ import { RouterOutlet } from '@angular/router';
 import { CakeComponent } from './cake.component';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from './footer.component';
+import { CakeInformation } from './cakeinformation';
+import cakeInfo from "./resources/cakeData.json";
 
 @Component({
   selector: 'app-root',
   imports: [
-    RouterOutlet, 
-    NgIf, 
-    NgFor, 
-    CakeComponent, 
+    RouterOutlet,
     HeaderComponent,
     FooterComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'HaoSweet';
+  cakes = [];
 }

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CakeInformation } from './cakeinformation';
 
 @Component({
   selector: 'cake',
@@ -7,7 +8,8 @@ import { Component, Input } from '@angular/core';
     <div Class="CakeSlot">
       <img [src]="picture">
       <div class="CakeDescription">
-        {{description}}
+        {{cakeInformation.name}}
+        {{cakeInformation.description}}
       </div>
     </div>
   `,
@@ -17,5 +19,5 @@ export class CakeComponent {
     description = "Test Description"
     picture = "MintCake.jpg"
 
-    // @Input() cakeInformation!: CakeInformation;
+    @Input() cakeInformation!: CakeInformation;
 }

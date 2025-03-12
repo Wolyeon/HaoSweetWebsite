@@ -1,5 +1,6 @@
 .CakeSlot{
     width: 375px;
+    height: 400px;
     padding: 25px;
 
 }
@@ -12,7 +13,7 @@
 
 .CakeDescription{
     width: 100%;
-    height: 50px;
+    height: 25px;
     text-align: center;
     border-bottom: solid 3px rgb(255, 255, 255);
 }

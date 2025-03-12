@@ -8,8 +8,9 @@ body{
 .BodyContent{
     display: grid;
     width: 90%;
+    justify-items: center;
     grid-auto-columns: 375px;
     grid-auto-rows: 400px;
     grid-gap: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(375px,1fr));
 }
