@@ -6,7 +6,7 @@ import { CakeInformation } from './cakeinformation';
   imports: [],
   template: `
     <div Class="CakeSlot">
-      <img [src]="picture">
+      <img src="{{cakeInformation.name}}.jpg" alt="MintCake.jpg" >
       <div class="CakeDescription">
         <p>{{cakeInformation.name}}</p>
         <p>{{cakeInformation.description}}</p>
