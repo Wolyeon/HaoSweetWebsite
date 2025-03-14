@@ -5,7 +5,6 @@ import { CakeComponent } from './cake.component';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from './footer.component';
 import { CakeInformation } from './cakeinformation';
-import cakeInfo from "./resources/cakeData.json";
 
 @Component({
   selector: 'app-root',

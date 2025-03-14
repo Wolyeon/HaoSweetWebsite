@@ -14,6 +14,7 @@ export class OrderComponent {
     this.myForm = new FormGroup({
       readTerms: new FormControl(false, [Validators.required, Validators.requiredTrue]),
       pickup: new FormControl("", Validators.required),
+      lactose: new FormControl("", [Validators.required]),
       cakeSize: new FormControl("", [Validators.required]),
       email: new FormControl("", [Validators.required, Validators.email]),
       message: new FormControl("", [Validators.required, Validators.maxLength(250)]),
@@ -21,7 +22,6 @@ export class OrderComponent {
     })
   }
   
-
   onSubmit() {
     if (this.myForm.valid) {
       // Do Something with the values.

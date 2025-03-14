@@ -8,8 +8,8 @@ import { CakeInformation } from './cakeinformation';
     <div Class="CakeSlot">
       <img [src]="picture">
       <div class="CakeDescription">
-        {{cakeInformation.name}}
-        {{cakeInformation.description}}
+        <p>{{cakeInformation.name}}</p>
+        <p>{{cakeInformation.description}}</p>
       </div>
     </div>
   `,
