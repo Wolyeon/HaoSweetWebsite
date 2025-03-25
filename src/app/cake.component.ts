@@ -6,18 +6,16 @@ import { CakeInformation } from './cakeinformation';
   imports: [],
   template: `
     <div Class="CakeSlot">
-      <img src="{{cakeInformation.name}}.jpg" alt="MintCake.jpg" >
+      <img src="{{cakeInformation.image}}.jpg" alt="{{cakeInformation.name}}" (error)="cakeInformation.image = filler">
       <div class="CakeDescription">
-        <p>{{cakeInformation.name}}</p>
+        <p><b>{{cakeInformation.name}}</b></p>
         <p>{{cakeInformation.description}}</p>
       </div>
     </div>
   `,
-  styleUrl: './cake.component.css'
+  styleUrl: './cake.component.css',
 })
 export class CakeComponent {
-    description = "Test Description"
-    picture = "MintCake.jpg"
-
-    @Input() cakeInformation!: CakeInformation;
+  filler = "Filler";
+  @Input() cakeInformation!: CakeInformation;
 }

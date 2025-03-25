@@ -5,4 +5,5 @@ export interface CakeInformation {
     tested: boolean;
     finalized: boolean;
     description: string;
+    image: string;
 }
