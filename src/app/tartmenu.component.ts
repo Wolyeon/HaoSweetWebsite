@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { CakeComponent } from './cake.component';
 import { CakeInformation } from './cakeinformation';
-import cakeData from './resources/cakeInfo.json';
+import tartData from './resources/tartInfo.json';
 import { NgFor } from '@angular/common';
 
 @Component({
-  selector: 'homemenu',
+  selector: 'tartmenu',
   imports: [CakeComponent, NgFor],
   template: `
     <div class="BodyContent">
@@ -14,6 +14,6 @@ import { NgFor } from '@angular/common';
   `,
   styleUrl: './app.component.css',
 })
-export class HomeComponent {
-  data: any[] = cakeData;
+export class TartMenuComponent {
+  data: any[] = tartData;
 }
