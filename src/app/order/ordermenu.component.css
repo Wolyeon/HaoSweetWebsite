@@ -1,0 +1,16 @@
+.orderform{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.oform{
+    padding: 10px
+}
+
+.cake{
+    border: solid 4px red;
+    height: 375px;
+    width: 400px;
+    padding: 10px
+}

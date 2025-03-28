@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CakeComponent } from './cake.component';
 import { CakeInformation } from './cakeinformation';
-import cakeData from './resources/cakeInfo.json';
 import { NgFor } from '@angular/common';
+import { WebServices } from './webservices';
 
 @Component({
   selector: 'homemenu',
@@ -15,5 +15,11 @@ import { NgFor } from '@angular/common';
   styleUrl: './app.component.css',
 })
 export class HomeComponent {
-  data: any[] = cakeData;
+  constructor(private ws: WebServices) {};
+  data?: CakeInformation[];
+
+  ngOnInit(){
+    this.ws.get_cakes().subscribe(data => this.data);
+  }
+  
 }

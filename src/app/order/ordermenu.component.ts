@@ -1,13 +1,18 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormsModule, ReactiveFormsModule, FormControl, Validators} from '@angular/forms';
+import { CakeComponent } from '../cake.component';
+import { Input } from '@angular/core';
+import { CakeInformation } from '../cakeinformation';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'ordermenu',
-  imports: [FormsModule, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, CakeComponent],
   templateUrl: './ordermenu.component.html',
   styleUrl: './ordermenu.component.css'
 })
 export class OrderComponent {
+  @Input() cakeInformation!: CakeInformation;
   myForm: FormGroup;
 
   constructor(){

@@ -1,10 +1,7 @@
-import { NgFor, NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { CakeComponent } from './cake.component';
 import { HeaderComponent } from './header.component';
 import { FooterComponent } from './footer.component';
-import { CakeInformation } from './cakeinformation';
 
 @Component({
   selector: 'app-root',
@@ -18,5 +15,4 @@ import { CakeInformation } from './cakeinformation';
 })
 export class AppComponent {
   title = 'HaoSweet';
-  cakes = [];
 }
