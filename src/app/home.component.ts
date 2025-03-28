@@ -16,10 +16,13 @@ import { WebServices } from './webservices';
 })
 export class HomeComponent {
   constructor(private ws: WebServices) {};
+
   data?: CakeInformation[];
 
   ngOnInit(){
-    this.ws.get_cakes().subscribe(data => this.data);
+    this.ws.get_cakes().subscribe(
+      data => this.data = data
+    );
   }
   
 }

@@ -7,24 +7,24 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class WebServices{
-    private apiURL = "";
+    private apiURL = "http://127.0.0.1:8000";
 
     constructor(private http: HttpClient) {}
     
     public get_cakes(): Observable<any>{
-        return this.http.get(this.apiURL+"cakes")
+        return this.http.get<CakeInformation[]>(this.apiURL+"/cakes")
     }
 
     public get_tarts(): Observable<any>{
-        return this.http.get(this.apiURL+"tarts")
+        return this.http.get<CakeInformation[]>(this.apiURL+"/tarts")
     }
 
     public get_others(): Observable<any>{
-        return this.http.get(this.apiURL+"others")
+        return this.http.get<CakeInformation[]>(this.apiURL+"/others")
     }
 
     public get_cakebyname(cakename: string): Observable<CakeInformation>{
         return this.http.get<CakeInformation>(this.apiURL+cakename)
-    }   
+    }
 }
 
