@@ -20,6 +20,6 @@ export class TartMenuComponent {
   constructor(private ws: WebServices){};
 
   ngOnInit(){
-    this.ws.get_tarts().subscribe(data => this.data)
+    this.ws.get_tarts().subscribe(data => this.data = data)
   }
 }

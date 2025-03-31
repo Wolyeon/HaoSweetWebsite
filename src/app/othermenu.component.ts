@@ -20,6 +20,6 @@ export class OtherMenuComponent {
   constructor(private ws: WebServices) {};
 
   ngOnInit(){
-    this.ws.get_others().subscribe(data => this.data);
+    this.ws.get_others().subscribe(data => this.data = data);
   }
 }
