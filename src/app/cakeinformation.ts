@@ -6,4 +6,5 @@ export interface CakeInformation {
     finalized: boolean;
     description: string;
     image: string;
+    productId: number;
 }

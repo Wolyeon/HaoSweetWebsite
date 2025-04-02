@@ -12,5 +12,5 @@ export const routes: Routes = [
     { path: "other", component: OtherMenuComponent},
     { path: "order", component: OrderComponent},
     { path: "faq", component: FaqComponent},
-    { path: "product/:productName", component: CakePageComponent}
+    { path: 'cake/:productId', component: CakePageComponent}
 ];

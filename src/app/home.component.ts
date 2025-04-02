@@ -19,7 +19,7 @@ import { ProductMenuComponent } from './productmenu.component'
 export class HomeComponent {
   constructor(private ws: WebServices) {};
 
-  data?: CakeInformation[];
+  data!: CakeInformation[];
 
   ngOnInit(){
     this.ws.get_cakes().subscribe(
