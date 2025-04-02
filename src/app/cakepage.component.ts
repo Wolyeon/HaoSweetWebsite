@@ -20,11 +20,11 @@ import { NgIf } from '@angular/common';
           <ul><h3>Price: {{cakeInformation.price}}</h3></ul>
           <ul><h3>Tested?: 
           <span *ngIf="cakeInformation.tested; else elseBlock">yes!</span>
-          <ng-template #elseBlock>no! :sadface:</ng-template> 
+          <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
           </h3></ul>
           <ul><h3>Finalized?:
             <span *ngIf="cakeInformation.finalized; else elseBlock">yes!</span>
-            <ng-template #elseBlock>no! :sadface:</ng-template> 
+            <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
           </h3></ul>
       </div>
   </div>

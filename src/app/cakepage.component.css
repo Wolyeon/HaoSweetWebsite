@@ -9,3 +9,8 @@
   height: 500px;
   padding: 25px;
 }
+
+ul{
+  height: 75px;
+  border: solid 3px red;
+}
