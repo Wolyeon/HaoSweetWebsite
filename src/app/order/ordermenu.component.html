@@ -1,9 +1,15 @@
 <body class="orderform">
   <div>
     <h1>Ordering Information!</h1>
-    <form class=oform [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <form class="oform" [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div>
-        <label for="readTerms">Did you read the terms and conditions?</label>
+        <label for="cake">Cake: </label>
+        <select id="cake" formControlName="cake">
+          <option *ngFor="let cake of AllCakes" value="cake.name">{{cake.name}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="readTerms">Did you read the <a routerLink="/faq" target="_blank">terms and conditions? </a></label>
         <input type="checkbox" id="readTerms" formControlName="readTerms"/>
       </div>
       <div>
@@ -11,15 +17,15 @@
         <input type="date" id="pickUp" formControlName="pickup"/>
       </div>
       <div>
-        <label for="lactose">Do you want lactose free cream?</label>
-        <select id="size" name="sizes" formControlName="size">
+        <label for="lactose">Do you want lactose free cream? </label>
+        <select id="lactose" name="lactose" formControlName="lactose">
           <option value="Yes">Yes</option>
           <option value="No">No</option>
         </select>
       </div>
       <div>
         <label for="cakeSize">What size cake? </label>
-        <select id="size" name="sizes" formControlName="size">
+        <select id="cakeSize" name="sizes" formControlName="cakeSize">
           <option value="8">8"</option>
           <option value="10">10"</option>
         </select>
@@ -40,6 +46,6 @@
     </form>
   </div>
   <div>
-    <cake [cakeInformation]="cakeInformation"></cake>
+    
   </div>
 </body>

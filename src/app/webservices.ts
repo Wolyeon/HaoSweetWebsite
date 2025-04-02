@@ -23,6 +23,10 @@ export class WebServices{
         return this.http.get<CakeInformation[]>(this.apiURL+"/others")
     }
 
+    public get_allproducts(): Observable<CakeInformation[]>{
+        return this.http.get<CakeInformation[]>(this.apiURL+"/allcakes")
+    }
+
     public get_cakebyid(productId: string): Observable<CakeInformation>{
         return this.http.get<CakeInformation>(this.apiURL+"/cakes/"+productId)
     }

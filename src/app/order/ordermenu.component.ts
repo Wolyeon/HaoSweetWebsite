@@ -3,20 +3,25 @@ import { FormGroup, FormsModule, ReactiveFormsModule, FormControl, Validators} f
 import { CakeComponent } from '../cake.component';
 import { Input } from '@angular/core';
 import { CakeInformation } from '../cakeinformation';
-import { HttpClient } from '@angular/common/http';
+import { WebServices } from '../webservices';
+import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'ordermenu',
-  imports: [FormsModule, ReactiveFormsModule, CakeComponent],
+  imports: [FormsModule, ReactiveFormsModule, NgFor, RouterLink],
   templateUrl: './ordermenu.component.html',
   styleUrl: './ordermenu.component.css'
 })
 export class OrderComponent {
   @Input() cakeInformation!: CakeInformation;
+  AllCakes!: CakeInformation[];
+  selectedCake!: CakeInformation;
   myForm: FormGroup;
 
-  constructor(){
+  constructor(private ws: WebServices){
     this.myForm = new FormGroup({
+      cake: new FormControl("", [Validators.required]),
       readTerms: new FormControl(false, [Validators.required, Validators.requiredTrue]),
       pickup: new FormControl("", Validators.required),
       lactose: new FormControl("", [Validators.required]),
@@ -25,6 +30,16 @@ export class OrderComponent {
       message: new FormControl("", [Validators.required, Validators.maxLength(250)]),
       allergies: new FormControl("", [Validators.required, Validators.maxLength(250)]),
     })
+  }
+
+  onSelected(cake: CakeInformation){
+    this.selectedCake = cake;
+  }
+
+  ngOnInit(){
+    this.ws.get_allproducts().subscribe(
+      data => this.AllCakes = data
+    )
   }
   
   onSubmit() {
