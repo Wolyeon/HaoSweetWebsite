@@ -17,6 +17,7 @@ export class OrderComponent {
   @Input() cakeInformation!: CakeInformation;
   AllCakes!: CakeInformation[];
   selectedCake!: CakeInformation;
+  cakeSizes?: string[];
   myForm: FormGroup;
 
   constructor(private ws: WebServices){
@@ -33,7 +34,8 @@ export class OrderComponent {
   }
 
   onSelected(cake: CakeInformation){
-    this.selectedCake = cake;
+    this.selectedCake = this.AllCakes.filter(product => product.name === cake.name)[0];
+    this.cakeSizes = this.selectedCake.sizes
   }
 
   ngOnInit(){

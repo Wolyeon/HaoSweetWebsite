@@ -5,7 +5,7 @@
       <div>
         <label for="cake">Cake: </label>
         <select id="cake" formControlName="cake">
-          <option *ngFor="let cake of AllCakes" value="cake.name">{{cake.name}}</option>
+          <option *ngFor="let cake of AllCakes" value="{{cake.name}}">{{cake.name}}</option>
         </select>
       </div>
       <div>
@@ -26,8 +26,7 @@
       <div>
         <label for="cakeSize">What size cake? </label>
         <select id="cakeSize" name="sizes" formControlName="cakeSize">
-          <option value="8">8"</option>
-          <option value="10">10"</option>
+          <option *ngFor="let size of cakeSizes" value="{{size}}">{{size}}</option>
         </select>
       </div>
       <div>
