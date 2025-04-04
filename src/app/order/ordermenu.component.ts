@@ -40,11 +40,14 @@ export class OrderComponent {
 
   ngOnInit(){
     this.ws.get_allproducts().subscribe(
-      data => this.AllCakes = data
+      data => {
+        this.AllCakes = data;
+        if (this.cakeName != null){
+          this.myForm.get("cake")?.setValue(this.cakeName);
+          this.refreshSizes(this.cakeName);
+        }
+      }
     )
-    if (this.cakeName != null){
-      this.myForm.get("cake")?.setValue(this.cakeName);
-    }
   }
   
   onSubmit() {
