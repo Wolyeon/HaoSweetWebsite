@@ -1,8 +1,12 @@
 .Footer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     text-align: center;
     padding-bottom: 10px;
     border-top: Solid 3px rgb(255, 255, 255);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
 }

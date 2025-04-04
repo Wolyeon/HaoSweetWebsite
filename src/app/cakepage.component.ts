@@ -27,7 +27,7 @@ import { NgIf } from '@angular/common';
             <span *ngIf="cakeInformation.finalized; else elseBlock">yes! <img src="safeHangyo.png"></span>
             <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
           </h3></ul>
-          <a routerLink="/order" [queryParams]="{cakeName: cakeInformation.name}"><img src="hangyoOrder1.png"></a>
+          <a routerLink="/order" [queryParams]="{cakeName: cakeInformation.name}"><img src="order.png" width="250" height="180"></a>
       </div>
   </div>
   `,
