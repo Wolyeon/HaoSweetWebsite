@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { CakeInformation } from './cakeinformation';
 import { WebServices } from './webservices';
+import { RouterLink } from '@angular/router';
 import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'cakepage',
-  imports: [NgIf],
+  imports: [NgIf, RouterLink],
   template: `
     <div Class=InfoPage>
       <div Class="CakeSlot">
@@ -26,6 +27,7 @@ import { NgIf } from '@angular/common';
             <span *ngIf="cakeInformation.finalized; else elseBlock">yes! <img src="safeHangyo.png"></span>
             <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
           </h3></ul>
+          <a routerLink="/order" [queryParams]="{cakeName: cakeInformation.name}"><img src="hangyoOrder1.png"></a>
       </div>
   </div>
   `,

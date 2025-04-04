@@ -9,12 +9,12 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'ordermenu',
-  imports: [FormsModule, ReactiveFormsModule, NgFor, RouterLink],
+  imports: [FormsModule, ReactiveFormsModule, NgFor, RouterLink, CakeComponent],
   templateUrl: './ordermenu.component.html',
   styleUrl: './ordermenu.component.css'
 })
 export class OrderComponent {
-  @Input() cakeInformation!: CakeInformation;
+  @Input() cakeName?: string;
   AllCakes!: CakeInformation[];
   selectedCake!: CakeInformation;
   cakeSizes?: string[];
@@ -33,8 +33,8 @@ export class OrderComponent {
     })
   }
 
-  onSelected(cake: CakeInformation){
-    this.selectedCake = this.AllCakes.filter(product => product.name === cake.name)[0];
+  refreshSizes(cake: string){
+    this.selectedCake = this.AllCakes.filter(product => product.name === cake)[0];
     this.cakeSizes = this.selectedCake.sizes
   }
 
@@ -42,6 +42,9 @@ export class OrderComponent {
     this.ws.get_allproducts().subscribe(
       data => this.AllCakes = data
     )
+    if (this.cakeName != null){
+      this.myForm.get("cake")?.setValue(this.cakeName);
+    }
   }
   
   onSubmit() {

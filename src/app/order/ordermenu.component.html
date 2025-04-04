@@ -4,7 +4,7 @@
     <form class="oform" [formGroup]="myForm" (ngSubmit)="onSubmit()">
       <div>
         <label for="cake">Cake: </label>
-        <select id="cake" formControlName="cake">
+        <select id="cake" formControlName="cake" (change)="refreshSizes(myForm.value.cake)">
           <option *ngFor="let cake of AllCakes" value="{{cake.name}}">{{cake.name}}</option>
         </select>
       </div>
@@ -45,6 +45,6 @@
     </form>
   </div>
   <div>
-    
+    <cake [cakeInformation]="myForm.value.cake"/>
   </div>
 </body>
