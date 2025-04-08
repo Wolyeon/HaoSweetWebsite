@@ -6,6 +6,7 @@ import { CakeInformation } from '../cakeinformation';
 import { WebServices } from '../webservices';
 import { NgFor } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { OrderInformation } from '../orderinformation';
 
 @Component({
   selector: 'ordermenu',
@@ -35,16 +36,23 @@ export class OrderComponent {
 
   refreshSizes(cake: string){
     this.selectedCake = this.AllCakes.filter(product => product.name === cake)[0];
-    this.cakeSizes = this.selectedCake.sizes
+    this.cakeSizes = this.selectedCake.sizes;
+    this.ws.get_allproducts().subscribe(
+      data => this.AllCakes = data
+    );
   }
 
   ngOnInit(){
     this.ws.get_allproducts().subscribe(
       data => {
         this.AllCakes = data;
-        if (this.cakeName != null){
+        if (this.cakeName != undefined){
           this.myForm.get("cake")?.setValue(this.cakeName);
           this.refreshSizes(this.cakeName);
+        }
+        else{
+          this.myForm.get("cake")?.setValue(this.AllCakes[0].name);
+          this.refreshSizes(this.AllCakes[0].name);
         }
       }
     )
@@ -52,7 +60,7 @@ export class OrderComponent {
   
   onSubmit() {
     if (this.myForm.valid) {
-      // Do Something with the values.
+      this.ws.post_order(this.myForm.value as OrderInformation);
     }
   }
 }

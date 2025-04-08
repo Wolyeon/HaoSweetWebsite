@@ -19,17 +19,11 @@ import { NgIf } from '@angular/common';
       <div>
           <ul><h3>Available Sizes: {{cakeInformation.sizes}}</h3></ul>
           <ul><h3>Price: {{cakeInformation.price}}</h3></ul>
-          <ul><h3>Tested?: 
-          <span *ngIf="cakeInformation.tested; else elseBlock">yes! <img src="safeHangyo.png"></span>
-          <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
-          </h3></ul>
-          <ul><h3>Finalized?:
-            <span *ngIf="cakeInformation.finalized; else elseBlock">yes! <img src="safeHangyo.png"></span>
-            <ng-template #elseBlock>no! <img src="naniHangyo.png"></ng-template> 
-          </h3></ul>
-          <a routerLink="/order" [queryParams]="{cakeName: cakeInformation.name}"><img src="order.png" width="250" height="180"></a>
+          <a routerLink="/order" [queryParams]="{cakeName: cakeInformation.name}">
+            <img src="order.png" width="250" height="180">
+          </a>
       </div>
-  </div>
+    </div>
   `,
   styleUrl: './cakepage.component.css',
 })
