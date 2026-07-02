@@ -24,6 +24,12 @@ This will compile your project and store the build artifacts in the `dist/` dire
 
 Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
+In our case we are hosting to Github pages so we can create a production version using the following commpand:
+
+```bash
+ng build --output-path docs --base-href /haosweetwebsite/
+```
+
 ## Resources
 
 This website is built using Typescript and Angular.
