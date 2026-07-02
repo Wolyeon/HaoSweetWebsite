@@ -8,7 +8,7 @@ import { OrderInformation } from './orderinformation';
     providedIn: 'root'
 })
 export class WebServices{
-    private apiURL = "http://127.0.0.1:8000";
+    private apiURL = "https://147.224.39.239:8000";
     private cakes?: Observable<CakeInformation[]>;
     private tarts?: Observable<CakeInformation[]>;
     private others?: Observable<CakeInformation[]>;
