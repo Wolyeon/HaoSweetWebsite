@@ -5,6 +5,7 @@ import { FaqComponent } from './faq/faq.component';
 import { TartMenuComponent } from './tartmenu.component';
 import { OtherMenuComponent } from './othermenu.component';
 import { CakePageComponent } from './cakepage.component';
+import { SpecialOrderComponent } from './specialorder/specialorder.component';
 
 export const routes: Routes = [
     { path: "", component: HomeComponent},
@@ -12,5 +13,6 @@ export const routes: Routes = [
     { path: "other", component: OtherMenuComponent},
     { path: "order", component: OrderComponent},
     { path: "faq", component: FaqComponent},
-    { path: 'cake/:productId', component: CakePageComponent}
+    { path: 'cake/:productId', component: CakePageComponent},
+    { path: "specialorder", component: SpecialOrderComponent },
 ];

@@ -1,0 +1,72 @@
+/* Special Order Introduction */
+.special-order-info {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+}
+
+/* Special Order Form */
+.special-order-form {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Form fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Input fields */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font: inherit;
+}
+
+/* Textarea */
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Image upload description */
+.form-group small {
+  margin-top: 5px;
+  color: #666;
+}
+
+/* Submit button */
+.special-order-form button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .special-order-form {
+    padding: 15px;
+  }
+}
+
+/* Contact Information labels only */
+.contact-info .form-group label {
+  font-size: 14px;
+  font-weight: normal;
+}

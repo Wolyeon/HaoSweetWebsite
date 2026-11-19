@@ -1,0 +1,133 @@
+
+<div class="special-order-info">
+  <h1>Special Order</h1>
+  <p>
+    We are happy to create a custom cake just for your special occasion.<br>
+    Please provide the information below, and let's create something truly special together.
+  </p>
+</div>
+
+<div class="special-order-form">
+  <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+
+    <!-- Reference Images -->
+    <div class="form-group">
+      <label for="referenceImages">
+        Reference Images / Design Inspiration
+      </label>
+      <input
+        type="file"
+        id="referenceImages"
+        name="referenceImages"
+        accept="image/*"
+        multiple
+        (change)="onFileSelected($event)"
+      >
+      <small>
+        Upload photos or drawings to show us
+        your cake design ideas.
+      </small>
+    </div>
+
+    <!-- Pickup Date -->
+    <div class="form-group">
+      <label for="pickupDate">Pickup Date</label>
+      <input
+        type="date"
+        id="pickupDate"
+        name="pickupDate"
+        formControlName="pickupDate"
+        required
+      >
+    </div>
+
+    <!-- Cake Size -->
+    <div class="form-group">
+      <label for="cakeSize">Cake Size</label>
+      <select id="cakeSize" name="cakeSize" required formControlName="cakeSize">
+        <option value="">Select a size</option>
+        <option value="6-inch">6 inch</option>
+        <option value="8-inch">8 inch</option>
+        <option value="10-inch">10 inch</option>
+      </select>
+    </div>
+
+    <!-- Message / Design Request -->
+    <div class="form-group">
+      <label for="designRequest">
+        Message / Design Request
+      </label>
+      <textarea
+        id="designRequest"
+        name="designRequest"
+        formControlName="designRequest"
+        rows="5"
+        placeholder="Describe your cake design..."
+
+      ></textarea>
+    </div>
+
+    <!-- Allergy / Dietary Notes -->
+    <div class="form-group">
+      <label for="allergyNotes">
+        Allergy / Dietary Notes
+      </label>
+      <textarea
+        id="allergyNotes"
+        name="allergyNotes"
+        formControlName="allergyNotes"
+        rows="3"
+        placeholder="Please list any allergies or dietary restrictions..."
+      ></textarea>
+    </div>
+
+    <!-- Contact Information -->
+    <h2>Contact Information</h2>
+
+    <div class="contact-info">
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          formControlName="name"
+          required
+        >
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          formControlName="email"
+          required
+        >
+      </div>
+
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">phone</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          formControlName="phone"
+          required
+        >
+      </div>
+
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit">
+      Submit Order
+    </button>
+
+  </form>
+</div>
